@@ -6,6 +6,8 @@ import { IRootState } from '@/redux/store';
 import * as $ from './InventoryInfo.style';
 import { IInventoryInfoProps, InventoryObject, OrganizedObjectType } from './InventoryInfo.type';
 
+// responsibility: (1) use productId to match and show inventory detail (2) switch color
+
 const InventoryInfo = ({ productId, name }: IInventoryInfoProps) => {
   const [chosenColor, setChosenColor] = useState('#fff');
   const inventory: OrganizedObjectType = useSelector((state: IRootState) => state.productStore.inventory);

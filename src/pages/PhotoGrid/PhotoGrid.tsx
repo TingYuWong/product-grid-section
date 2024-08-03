@@ -9,6 +9,8 @@ import { IRootState } from '@/redux/store';
 import * as $ from './PhotoGrid.styled';
 import { OrganizedObjectType } from './PhotoGrid.type';
 
+// responsibility: call api and get data
+
 const PhotoGrid = () => {
   const products = useSelector((state: IRootState) => state.productStore.products);
   const inventory = useSelector((state: IRootState) => state.productStore.inventory);

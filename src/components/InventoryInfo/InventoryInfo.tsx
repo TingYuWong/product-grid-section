@@ -8,7 +8,7 @@ import { IInventoryInfoProps, InventoryObject, OrganizedObjectType } from './Inv
 
 // responsibility: (1) use productId to match and show inventory detail (2) switch color
 
-const InventoryInfo = ({ productId, name }: IInventoryInfoProps) => {
+const InventoryInfo = ({ productId, name, isOutsideOfViewPort }: IInventoryInfoProps) => {
   const [chosenColor, setChosenColor] = useState('#fff');
   const inventory: OrganizedObjectType = useSelector((state: IRootState) => state.productStore.inventory);
   const productImages: OrganizedObjectType = useSelector((state: IRootState) => state.productStore.productImages);
@@ -23,7 +23,12 @@ const InventoryInfo = ({ productId, name }: IInventoryInfoProps) => {
     <$.Container>
       <$.Card>
         <$.ImageWrap>
-          <$.Image src={productImages[`${productId}-color`][0]} />
+          <$.Image
+            src={productImages[`${productId}-color`][0]}
+            loading={isOutsideOfViewPort ? 'lazy' : 'eager'}
+            width='100%'
+            height='300px'
+          />
         </$.ImageWrap>
         <$.Product>
           <$.Color>{chosenColor}</$.Color>

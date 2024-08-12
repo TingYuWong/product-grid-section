@@ -1,6 +1,7 @@
 export interface IInventoryInfoProps {
   productId: string;
   name: string;
+  isOutsideOfViewPort: boolean;
 }
 
 export interface OrganizedObjectType {

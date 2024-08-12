@@ -76,8 +76,15 @@ const PhotoGrid = () => {
             <$.ViewAll>View All</$.ViewAll>
           </$.TitleRow>
           <$.GridContainer>
-            {products.map((item) => {
-              return <InventoryInfo productId={item.productId} name={item.name} key={item.productId} />;
+            {products.map((item, index) => {
+              return (
+                <InventoryInfo
+                  isOutsideOfViewPort={index > 7}
+                  productId={item.productId}
+                  name={item.name}
+                  key={item.productId}
+                />
+              );
             })}
           </$.GridContainer>
         </$.Wrap>

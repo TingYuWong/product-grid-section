@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import TextField from '@mui/material/TextField';
 
-export const Container = styled.div`
-  padding: 16px;
-  box-sizing: border-box;
-`;
-
 export const Wrap = styled.div`
   box-sizing: border-box;
   padding: 96px;

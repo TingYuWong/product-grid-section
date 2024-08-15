@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
+  background-color: #fff;
+  border-radius: 6px;
   padding: 96px;
   @media screen and (max-width: 1400px) {
     padding: 96px 48px;

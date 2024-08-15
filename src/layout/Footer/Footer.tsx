@@ -48,60 +48,58 @@ const Footer = () => {
   };
 
   return (
-    <$.Container>
-      <$.Wrap>
-        <$.Subscribe>
-          <$.Texts>
-            <$.Title>Join our newsletter</$.Title>
-            <$.Subtitle>We'll send you a nice letter once per week. No spam.</$.Subtitle>
-          </$.Texts>
-          <$.Email>
-            <$.InputWrap>
-              <$.Input placeholder='Enter your email' fullWidth value={email} onChange={handleEmailChange} />
-              <$.ErrorHint>{errorHint}</$.ErrorHint>
-            </$.InputWrap>
-            <$.Button $disabled={Boolean(errorHint)} onClick={handleToast}>
-              Subscribe
-            </$.Button>
-          </$.Email>
-        </$.Subscribe>
-        <$.NavItems>
-          <$.LogoRow>
-            <$.Logo>
-              <img src={logo} alt='logo' />
-              <$.Brand>StyleNest</$.Brand>
-            </$.Logo>
-            <$.Subtitle>Craft stunning style journeys that weave more joy into every thread.</$.Subtitle>
-          </$.LogoRow>
-          <$.Items>
-            <$.Categories>
-              <$.NavTitle>SHOP CATEGORIES</$.NavTitle>
-              <$.NavItem>Unisex</$.NavItem>
-              <$.NavItem>Women</$.NavItem>
-              <$.NavItem>Men</$.NavItem>
-            </$.Categories>
-            <$.Collections>
-              <$.NavTitle>SHOP COLLECTIONS</$.NavTitle>
-              <$.NavItem>Latest arrivals</$.NavItem>
-              <$.NavItem>Urban Oasis </$.NavItem>
-              <$.NavItem>Cozy Comfort </$.NavItem>
-              <$.NavItem>Fresh Fusion</$.NavItem>
-            </$.Collections>
-          </$.Items>
-        </$.NavItems>
-        <$.DividedLine />
-        <$.Sns>
-          <$.CopyRight>© 2024 StyleNest, Inc. All rights reserved.</$.CopyRight>
-          <$.Icons>
-            <img src={youtube} alt='youtube' />
-            <img src={instagram} alt='ig' />
-            <img src={facebook} alt='fb' />
-            <img src={github} alt='github' />
-            <img src={twitter} alt='twitter' />
-          </$.Icons>
-        </$.Sns>
-      </$.Wrap>
-    </$.Container>
+    <$.Wrap>
+      <$.Subscribe>
+        <$.Texts>
+          <$.Title>Join our newsletter</$.Title>
+          <$.Subtitle>We'll send you a nice letter once per week. No spam.</$.Subtitle>
+        </$.Texts>
+        <$.Email>
+          <$.InputWrap>
+            <$.Input placeholder='Enter your email' fullWidth value={email} onChange={handleEmailChange} />
+            <$.ErrorHint>{errorHint}</$.ErrorHint>
+          </$.InputWrap>
+          <$.Button $disabled={Boolean(errorHint)} onClick={handleToast}>
+            Subscribe
+          </$.Button>
+        </$.Email>
+      </$.Subscribe>
+      <$.NavItems>
+        <$.LogoRow>
+          <$.Logo>
+            <img src={logo} alt='logo' />
+            <$.Brand>StyleNest</$.Brand>
+          </$.Logo>
+          <$.Subtitle>Craft stunning style journeys that weave more joy into every thread.</$.Subtitle>
+        </$.LogoRow>
+        <$.Items>
+          <$.Categories>
+            <$.NavTitle>SHOP CATEGORIES</$.NavTitle>
+            <$.NavItem>Unisex</$.NavItem>
+            <$.NavItem>Women</$.NavItem>
+            <$.NavItem>Men</$.NavItem>
+          </$.Categories>
+          <$.Collections>
+            <$.NavTitle>SHOP COLLECTIONS</$.NavTitle>
+            <$.NavItem>Latest arrivals</$.NavItem>
+            <$.NavItem>Urban Oasis </$.NavItem>
+            <$.NavItem>Cozy Comfort </$.NavItem>
+            <$.NavItem>Fresh Fusion</$.NavItem>
+          </$.Collections>
+        </$.Items>
+      </$.NavItems>
+      <$.DividedLine />
+      <$.Sns>
+        <$.CopyRight>© 2024 StyleNest, Inc. All rights reserved.</$.CopyRight>
+        <$.Icons>
+          <img src={youtube} alt='youtube' />
+          <img src={instagram} alt='ig' />
+          <img src={facebook} alt='fb' />
+          <img src={github} alt='github' />
+          <img src={twitter} alt='twitter' />
+        </$.Icons>
+      </$.Sns>
+    </$.Wrap>
   );
 };
 

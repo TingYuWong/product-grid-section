@@ -6,7 +6,7 @@ import InventoryInfo from '@/components/InventoryInfo/InventoryInfo';
 import { setInventory, setProductImages, setProducts } from '@/redux/slices/productSlice';
 import { IRootState } from '@/redux/store';
 
-import * as $ from './PhotoGrid.styled';
+import * as $ from './PhotoGrid.style';
 import { OrganizedObjectType } from './PhotoGrid.type';
 
 // responsibility: call api and get data

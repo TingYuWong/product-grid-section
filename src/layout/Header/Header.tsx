@@ -1,8 +1,8 @@
 import * as $ from './Header.style';
 import logo from '@/assets/logo.png';
-import cart from '@/assets/cart.png';
-import menu from '@/assets/menu.png';
-import close from '@/assets/close.png';
+import cart from '@/assets/cart.svg';
+import menu from '@/assets/menu.svg';
+import close from '@/assets/close.svg';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useState } from 'react';
 

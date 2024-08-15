@@ -38,7 +38,7 @@ const Header = () => {
             <img src={logo} alt='logo' />
             <$.Brand>StyleNest</$.Brand>
           </$.Logo>
-          <img src={close} alt='close-menu' onClick={() => setOpenMobileNav(false)} />
+          <$.CloseIcon src={close} alt='close-menu' onClick={() => setOpenMobileNav(false)} />
         </$.Top>
         <$.Bottom>
           <$.MobileNavItem>Shop All</$.MobileNavItem>

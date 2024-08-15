@@ -51,6 +51,10 @@ export const Brand = styled.div`
   font-weight: 900;
 `;
 
+export const CloseIcon = styled.img`
+  cursor: pointer;
+`;
+
 export const DesktopNavItem = styled.div`
   cursor: pointer;
   color: #525252;

@@ -5,6 +5,7 @@ import { IRootState } from '@/redux/store';
 
 import * as $ from './InventoryInfo.style';
 import { IInventoryInfoProps, InventoryObject, OrganizedObjectType } from './InventoryInfo.type';
+import { useNavigate } from 'react-router-dom';
 
 // responsibility: (1) use productId to match and show inventory detail (2) switch color
 
@@ -12,6 +13,7 @@ const InventoryInfo = ({ productId, name, isOutsideOfViewPort }: IInventoryInfoP
   const [chosenColor, setChosenColor] = useState('#fff');
   const inventory: OrganizedObjectType = useSelector((state: IRootState) => state.productStore.inventory);
   const productImages: OrganizedObjectType = useSelector((state: IRootState) => state.productStore.productImages);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setChosenColor(inventory[`${productId}-color`][0]);
@@ -20,7 +22,7 @@ const InventoryInfo = ({ productId, name, isOutsideOfViewPort }: IInventoryInfoP
   const item: InventoryObject = inventory[`${productId}--${chosenColor}-${inventory[`${productId}-size`][0]}`];
 
   return (
-    <$.Container>
+    <$.Container onClick={() => navigate(`/list/${productId}`)}>
       <$.Card>
         <$.ImageWrap>
           <$.Image

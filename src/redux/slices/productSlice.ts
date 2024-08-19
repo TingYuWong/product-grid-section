@@ -8,6 +8,7 @@ const initialState = {
   inventory: {},
   collections: [],
   productImages: {},
+  productInfo: [],
 };
 
 export const productSlice = createSlice({
@@ -29,9 +30,13 @@ export const productSlice = createSlice({
     setInventory: (state, action) => {
       state.inventory = action.payload;
     },
+    setProductInfo: (state, action) => {
+      state.productInfo = action.payload;
+    },
   },
 });
 
-export const { setProducts, setProductImages, setCategories, setCollections, setInventory } = productSlice.actions;
+export const { setProducts, setProductImages, setCategories, setCollections, setInventory, setProductInfo } =
+  productSlice.actions;
 
 export default productSlice.reducer;
